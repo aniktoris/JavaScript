@@ -20,17 +20,10 @@ function runExperiment(sampleSize) {
 
 function main() {
   const sampleSizes = [100, 1000, 1000000];
-  const allResults = [];
 
   for(const sampleSize of sampleSizes){
-    const experimentResults = runExperiment(sampleSize);
-    allResults.push([experimentResults, sampleSize]);
+    console.log(runExperiment(sampleSize), sampleSize);
   }
-  return allResults;
 }
 
-const results = main();
-
-for(const [experimentResults, sampleSize] of results){
-  console.log(experimentResults, sampleSize);
-}
+main();
